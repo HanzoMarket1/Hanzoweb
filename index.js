@@ -58,13 +58,13 @@ global.fetchJson = async (url, options = {}) => {
 //             SETTINGS
 // =====================================
 const settings = {
-  name: "Skyzopedia Api's",
+  name: "HanzoMarket Api's",
   description: "Simple and Easy-to-Use API Documentation for seamless WhatsApp Bot integration.",
   apiSettings: {
-    creator: "Skyzopedia",
-    apikey: ["skyy"]
+    creator: "HanzoMarket",
+    apikey: ["Hanzo"]
   },
-  links: "https://whatsapp.com/channel/0029Vb7HGkP7j6g5lLi0JY0f"
+  links: "https://whatsapp.com/channel/0029Vb7b2Z63AzNNk3AEVQ19"
 };
 
 global.apikey = settings.apiSettings.apikey;
@@ -79,7 +79,7 @@ app.use((req, res, next) => {
     if (data && typeof data === 'object') {
       const responseData = {
         status: data.status,
-        creator: settings.apiSettings.creator || "Created Using Skyzopedia",
+        creator: settings.apiSettings.creator || "Created Using HanzoMarket",
         ...data
       };
       return originalJson.call(this, responseData);
